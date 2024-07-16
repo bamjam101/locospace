@@ -1,0 +1,13 @@
+{
+  "name": "@locospace/sample-lib",
+  "version": "1.0.0",
+  "description": "Sample library for Locospace",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "tsc": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

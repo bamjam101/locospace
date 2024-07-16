@@ -10,6 +10,8 @@
     "tsc": "tsc --noEmit"
   },
   "dependencies": {
+    "@locospace/network": "*",
+    "@locospace/sample-lib": "*",
     "react": "^18",
     "react-dom": "^18",
     "next": "14.2.4"

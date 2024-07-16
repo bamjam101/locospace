@@ -89,6 +89,8 @@ export class AuthGuard implements CanActivate {
 
     const [admin] = await Promise.all([
       this.prisma.admin.findUnique({ where: { uid } }),
+      this.prisma.manager.findUnique({ where: { uid } }),
+      this.prisma.valet.findUnique({ where: { uid } }),
     ])
     admin && roles.push('admin')
 
