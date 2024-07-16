@@ -1,8 +1,7 @@
 import { InputType, PartialType } from '@nestjs/graphql'
-import { User } from '@prisma/client'
-import { CreateUserInput } from './create-user.input'
+import { User } from '../entity/user.entity'
 
 @InputType()
-export class UpdateUserInput extends PartialType(CreateUserInput) {
+export class UpdateUserInput extends PartialType(User) {
   uid: User['uid']
 }

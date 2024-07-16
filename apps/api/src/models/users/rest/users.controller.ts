@@ -47,7 +47,7 @@ export class UsersController {
       ...(skip ? { skip: +skip } : null),
       ...(take ? { take: +take } : null),
       ...(sortBy ? { orderBy: { [sortBy]: order || 'asc' } } : null),
-      ...(search
+      ...(searchBy
         ? { where: { [searchBy]: { contains: search, mode: 'insensitive' } } }
         : null),
     })
@@ -56,7 +56,7 @@ export class UsersController {
   @ApiOkResponse({ type: UserEntity })
   @Get(':uid')
   findOne(@Param('uid') uid: string) {
-    return this.prisma.user.findUnique({ where: { uid: uid } })
+    return this.prisma.user.findUnique({ where: { uid } })
   }
 
   @ApiOkResponse({ type: UserEntity })
@@ -68,10 +68,10 @@ export class UsersController {
     @Body() updateUserDto: UpdateUser,
     @GetUser() user: GetUserType,
   ) {
-    const userInfo = await this.prisma.user.findUnique({ where: { uid: uid } })
+    const userInfo = await this.prisma.user.findUnique({ where: { uid } })
     checkRowLevelPermission(user, userInfo.uid)
     return this.prisma.user.update({
-      where: { uid: uid },
+      where: { uid },
       data: updateUserDto,
     })
   }
@@ -80,8 +80,8 @@ export class UsersController {
   @AllowAuthenticated()
   @Delete(':uid')
   async remove(@Param('uid') uid: string, @GetUser() user: GetUserType) {
-    const userInfo = await this.prisma.user.findUnique({ where: { uid: uid } })
+    const userInfo = await this.prisma.user.findUnique({ where: { uid } })
     checkRowLevelPermission(user, userInfo.uid)
-    return this.prisma.user.delete({ where: { uid: uid } })
+    return this.prisma.user.delete({ where: { uid } })
   }
 }

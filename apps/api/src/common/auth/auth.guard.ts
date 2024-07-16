@@ -36,10 +36,26 @@ export class AuthGuard implements CanActivate {
     }
 
     try {
-      const user = await this.jwtService.verify(token)
+      const payload = await this.jwtService.verify(token)
+
+      if (!payload?.uid) {
+        throw new UnauthorizedException('Invalid token.')
+      }
+
+      const user = await this.prisma.user.findUnique({
+        where: {
+          uid: payload.uid,
+        },
+      })
+
+      if (!user) {
+        throw new UnauthorizedException('Invalid token.')
+      }
+
       req.user = user
     } catch (err) {
       console.error('Token validation error:', err)
+      throw new UnauthorizedException('Invalid token.')
     }
 
     if (!req.user) {
@@ -51,13 +67,12 @@ export class AuthGuard implements CanActivate {
     req: any,
     context: ExecutionContext,
   ): Promise<boolean> {
-    const userRoles = await this.getUserRoles(req.user.uid)
-    req.user.roles = userRoles
-
     const requiredRoles = this.getMetadata<Role[]>('roles', context)
     if (!requiredRoles || requiredRoles.length === 0) {
       return true
     }
+    const userRoles = await this.getUserRoles(req.user.uid)
+    req.user.roles = userRoles
 
     return requiredRoles.some((role) => userRoles.includes(role))
   }
@@ -70,14 +85,11 @@ export class AuthGuard implements CanActivate {
   }
 
   private async getUserRoles(uid: string): Promise<Role[]> {
-    const rolePromises = [
-      this.prisma.admin.findUnique({ where: { uid } }),
-      // Add promises for other role models here
-    ]
-
     const roles: Role[] = []
 
-    const [admin] = await Promise.all(rolePromises)
+    const [admin] = await Promise.all([
+      this.prisma.admin.findUnique({ where: { uid } }),
+    ])
     admin && roles.push('admin')
 
     return roles
