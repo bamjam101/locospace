@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
+
+import '@locospace/ui/src/app/globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
 import { ApolloProvider } from '@locospace/network/src/config/apollo'
+import { SessionProvider } from '@locospace/ui/src/components/molecules/SessionProvider'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -18,9 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ApolloProvider>
-        <body className={inter.className}>{children}</body>
-      </ApolloProvider>
+      <SessionProvider>
+        <ApolloProvider>
+          <body className={inter.className}>{children}</body>
+        </ApolloProvider>
+      </SessionProvider>
     </html>
   )
 }

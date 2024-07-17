@@ -1,28 +1,22 @@
 'use client'
 
 import { useQuery } from '@apollo/client'
-import { add } from '@locospace/sample-lib'
 import { CompaniesDocument } from '@locospace/network/src/gql/generated'
+import { signOut, useSession } from 'next-auth/react'
+import { Button } from '@locospace/ui/src/components/atoms/Button'
+import Link from 'next/link'
 
 export default function Home() {
-  const { data, loading } = useQuery(CompaniesDocument)
+  // const { data, loading } = useQuery(CompaniesDocument)
+
+  const { data: sessionData, status } = useSession()
   return (
-    <section>
-      <h1>Home Page</h1>
-      <header className="text-center">
-        Hello, User{add(1, Math.floor(Math.random() * 10))}
-      </header>
-      <main>
-        {loading ? (
-          <p>Loading...</p>
-        ) : (
-          <>
-            {data?.companies.map((company) => (
-              <div key={company.id}>{company.displayName}</div>
-            ))}
-          </>
-        )}
-      </main>
-    </section>
+    <main>
+      {sessionData?.user?.uid ? (
+        <Button onClick={() => signOut()}>Sign Out</Button>
+      ) : (
+        <Link href={'/login'}>Login</Link>
+      )}
+    </main>
   )
 }
