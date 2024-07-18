@@ -9,11 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^2.1.2",
     "@locospace/forms": "*",
     "@locospace/util": "*",
+    "mapbox-gl": "^3.5.1",
     "next": "14.2.5",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-map-gl": "^7.1.7"
   },
   "devDependencies": {
     "@types/node": "^20",
