@@ -1,7 +1,7 @@
 'use client'
 
 import { useFormLogin } from '@locospace/forms/src/login'
-import { Form } from '../atoms/Form.tsx'
+import { Form } from '../atoms/Form'
 import { HtmlLabel } from '../atoms/HtmlLabel'
 import { HtmlInput } from '../atoms/HtmlInput'
 import { Button } from '../atoms/Button'

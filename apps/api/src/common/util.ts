@@ -1,4 +1,4 @@
-export const toTitleCase = (str: string) => {
+export const toTitleCase = (str: string): string => {
   return str
     .replace(/([A-Z])/g, ' $1') // insert a space before all capital letters
     .replace(/^./, function (str) {
@@ -6,6 +6,6 @@ export const toTitleCase = (str: string) => {
     }) // uppercase the first character
 }
 
-export const generateSixDigitNumber = () => {
+export const generateSixDigitNumber = (): number => {
   return Math.floor(Math.random() * 900000) + 100000
 }

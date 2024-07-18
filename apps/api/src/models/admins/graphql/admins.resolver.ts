@@ -71,7 +71,6 @@ export class AdminsResolver {
     @GetUser() user: GetUserType,
   ) {
     const admin = await this.prisma.admin.findUnique(args)
-    console.log('remove admin', user, admin.uid)
     checkRowLevelPermission(user, admin.uid)
     return this.adminsService.remove(args)
   }

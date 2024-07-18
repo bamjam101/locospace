@@ -50,10 +50,10 @@ model Credentials {
 }
 
 model AuthProvider {
-  uid String @id
+  uid  String @id
+  User User   @relation(fields: [uid], references: [uid])
 
   type AuthProviderType
-  User User             @relation(fields: [uid], references: [uid])
 }
 
 enum AuthProviderType {

@@ -9,14 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@headlessui/react": "^2.1.2",
     "@locospace/forms": "*",
+    "@locospace/network": "*",
     "@locospace/util": "*",
+    "@mui/material": "^5.16.4",
+    "@stripe/stripe-js": "^4.1.0",
     "mapbox-gl": "^3.5.1",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "react-map-gl": "^7.1.7"
+    "react-map-gl": "^7.1.7",
+    "react-toastify": "^10.0.5"
   },
   "devDependencies": {
     "@types/node": "^20",

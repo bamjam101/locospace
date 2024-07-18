@@ -21,7 +21,8 @@
     "tsc": "yarn nx run-many -t tsc",
     "lint": "yarn nx run-many -t lint",
     "build": "yarn nx run-many -t build",
-    "validate": "yarn format:write && yarn tsc && yarn lint && yarn build"
+    "validate": "yarn format:write && yarn tsc && yarn lint && yarn build",
+    "cloc": "npx cloc --exclude-dir=node_modules,dist,build,yarn.lock,package.json,generated.tsx,.next,.nx ."
   },
   "keywords": [],
   "author": "",

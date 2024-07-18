@@ -24,7 +24,7 @@ import { ReviewsModule } from './models/reviews/reviews.module'
 import { VerificationsModule } from './models/verifications/verifications.module'
 import { CustomersModule } from './models/customers/customers.module'
 
-const MAX_AGE = 24 * 60 * 60
+const MAX_AGE = 1 * 24 * 60 * 60
 
 @Module({
   imports: [

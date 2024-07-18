@@ -22,7 +22,6 @@ const variantColor = {
     success: 'text-white bg-green enabled:hover:bg-green-700',
     error: 'text-white bg-red enabled:hover:bg-red-700',
   },
-
   outlined: {
     primary: 'border-2 border-primary text-black enabled:hover:bg-black/10',
     white: 'border-2 border-white text-white enabled:hover:bg-white/10',

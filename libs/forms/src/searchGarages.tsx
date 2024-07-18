@@ -5,6 +5,7 @@ import { toLocalISOString } from '@locospace/util/src/date'
 import { ReactNode } from 'react'
 import { DefaultValues, FormProvider, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { isEndTimeValid, isStartTimeValid } from './util'
 
 const minMaxTuple = z.tuple([z.number(), z.number()])
 
@@ -13,13 +14,13 @@ export const formSchemaSearchGarages = z.object({
   endTime: z.string(),
 
   locationFilter: z.object({
-    ne_lat: z.number().optional(),
-    ne_lng: z.number().optional(),
-    sw_lat: z.number().optional(),
-    sw_lng: z.number().optional(),
+    ne_lat: z.number(),
+    ne_lng: z.number(),
+    sw_lat: z.number(),
+    sw_lng: z.number(),
   }),
 
-  type: z.nativeEnum(SlotType).array(),
+  types: z.nativeEnum(SlotType).array(),
 
   pricePerHour: minMaxTuple.optional(),
   height: minMaxTuple.optional(),
@@ -32,25 +33,12 @@ export const formSchemaSearchGarages = z.object({
 
 export type FormTypeSearchGarages = z.infer<typeof formSchemaSearchGarages>
 
-const isStartTimeValid = (data: FormTypeSearchGarages) => {
-  const startDate = new Date(data.startTime)
-
-  return startDate > new Date()
-}
-
-const isEndTimeValid = (data: FormTypeSearchGarages) => {
-  const endDate = new Date(data.endTime)
-  const startDate = new Date(data.startTime)
-
-  return endDate > startDate
-}
-
 formSchemaSearchGarages
-  .refine(isStartTimeValid, {
+  .refine(({ startTime }) => isStartTimeValid(startTime), {
     message: 'Start time must be in the future',
     path: ['startTime'],
   })
-  .refine(isEndTimeValid, {
+  .refine(({ startTime, endTime }) => isEndTimeValid({ startTime, endTime }), {
     message: 'End time must be after start time',
     path: ['endTime'],
   })
@@ -81,7 +69,7 @@ export const formDefaultValueSearchGarages: DefaultValues<FormTypeSearchGarages>
     width: [0, 20],
     height: [0, 100],
     length: [0, 100],
-    type: AllSlotTypes.sort(),
+    types: AllSlotTypes.sort(),
   }
 
 export const FormProviderSearchGarages = ({

@@ -5,7 +5,7 @@ import { useFormRegister } from '@locospace/forms/src/register'
 
 import { useMutation } from '@apollo/client'
 import { RegisterWithCredentialsDocument } from '@locospace/network/src/gql/generated'
-import { Form } from '../atoms/Form.tsx'
+import { Form } from '../atoms/Form'
 
 import { Button } from '../atoms/Button'
 import { HtmlLabel } from '../atoms/HtmlLabel'

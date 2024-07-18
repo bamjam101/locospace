@@ -21,3 +21,5 @@ export type ViewState = {
   longitude: number
   zoom?: number
 }
+
+export type LocationInfo = { placeName: string; latLng: [number, number] }
