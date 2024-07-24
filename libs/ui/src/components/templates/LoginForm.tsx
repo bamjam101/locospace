@@ -50,7 +50,7 @@ export const LoginForm = ({ className }: ILoginFormProps) => {
           placeholder="Email"
         />
       </HtmlLabel>
-      <HtmlLabel title="Password" optional error={errors.password?.message}>
+      <HtmlLabel title="Password" error={errors.password?.message}>
         <HtmlInput
           className={`text-black`}
           type="password"

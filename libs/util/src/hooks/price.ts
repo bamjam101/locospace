@@ -33,8 +33,8 @@ export const useTotalPrice = ({ pricePerHour }: TotalPriceType) => {
     const pickupCharge = valet?.pickupInfo?.distance
       ? valet?.pickupInfo?.distance * VALET_CHARGE_PER_METER
       : 0
-    const dropOfCharge = valet?.dropofInfo?.distance
-      ? valet?.dropofInfo?.distance * VALET_CHARGE_PER_METER
+    const dropOfCharge = valet?.dropoffInfo?.distance
+      ? valet?.dropoffInfo?.distance * VALET_CHARGE_PER_METER
       : 0
 
     setValetChargePickup(Math.floor(pickupCharge))

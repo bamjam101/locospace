@@ -24,6 +24,7 @@ import { useSession } from 'next-auth/react'
 import { TotalPrice } from '@locospace/util/types'
 import { loadStripe } from '@stripe/stripe-js'
 import { toast } from 'react-toastify'
+import { ManageValets } from './ManageValets'
 
 export const BookSlotPopup = ({
   garage,
@@ -216,6 +217,8 @@ export const BookSlotPopup = ({
               {...register('phoneNumber')}
             />
           </HtmlLabel>
+
+          <ManageValets garage={garage} />
 
           {totalPriceObj ? (
             <div className="mt-4">

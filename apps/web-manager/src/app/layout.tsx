@@ -3,24 +3,24 @@ import { Inter } from 'next/font/google'
 
 import '@locospace/ui/src/app/globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
-
-import { ApolloProvider } from '@locospace/network/src/config/apollo'
-import { SessionProvider } from '@locospace/ui/src/components/molecules/SessionProvider'
-
-export const metadata: Metadata = {
-  title: 'Locospace | Home',
-  description: 'Locospace for all your parking needs.',
-}
-
 import { Header } from '@locospace/ui/src/components/organisms/Header'
 import { ToastContainer } from '@locospace/ui/src/components/molecules/Toast'
 import { Container } from '@locospace/ui/src/components/atoms/Container'
+import { ApolloProvider } from '@locospace/network/src/config/apollo'
+import { SessionProvider } from '@locospace/ui/src/components/molecules/SessionProvider'
+
 import { MenuItem } from '@locospace/util/types'
 
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: 'Locospace | Manager',
+  description: 'Locospace for all your parking needs.',
+}
+
 const MENUITEMS: MenuItem[] = [
-  { label: 'Search', href: '/search' },
-  { label: 'Bookings', href: '/bookings' },
+  { label: 'New Garage', href: '/createGarage' },
+  { label: 'Valets', href: '/valets' },
 ]
 
 export default function RootLayout({

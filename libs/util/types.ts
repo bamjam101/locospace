@@ -23,3 +23,16 @@ export type ViewState = {
 }
 
 export type LocationInfo = { placeName: string; latLng: [number, number] }
+
+export type TotalPrice = {
+  parkingCharge: number
+  valetChargeDropoff: number
+  valetChargePickup: number
+}
+
+export type LatLng = {
+  lat: number
+  lng: number
+}
+
+export type LngLatTuple = [number, number]

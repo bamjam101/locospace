@@ -23,6 +23,7 @@ import { BookingTimelinesModule } from './models/booking-timelines/booking-timel
 import { ReviewsModule } from './models/reviews/reviews.module'
 import { VerificationsModule } from './models/verifications/verifications.module'
 import { CustomersModule } from './models/customers/customers.module'
+import { StripeModule } from './models/stripe/stripe.module'
 
 const MAX_AGE = 1 * 24 * 60 * 60
 
@@ -41,6 +42,7 @@ const MAX_AGE = 1 * 24 * 60 * 60
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
     }),
     PrismaModule,
+    StripeModule,
 
     UsersModule,
     AdminsModule,

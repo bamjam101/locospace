@@ -2862,6 +2862,15 @@
         "hash": "sha512-V4BG07kuYSUkTCSBHG8G8TNhM+F19jXFWnQtzj+we8DrkpSBCee9Z3Ms8yiGer/dlmhe35/Xdgyo3/0rQKg7YA=="
       }
     },
+    "npm:@stripe/stripe-js": {
+      "type": "npm",
+      "name": "npm:@stripe/stripe-js",
+      "data": {
+        "version": "4.1.0",
+        "packageName": "@stripe/stripe-js",
+        "hash": "sha512-HhstGRUz/4JdbZpb26OcOf8Qb/cFR02arvHvgz4sPFLSnI6ZNHC53Jc6JP/FGNwxtrF719YyUnK0gGy4oyhucQ=="
+      }
+    },
     "npm:@swc/counter": {
       "type": "npm",
       "name": "npm:@swc/counter",
@@ -9844,6 +9853,15 @@
         "version": "7.1.7",
         "packageName": "react-map-gl",
         "hash": "sha512-mwjc0obkBJOXCcoXQr3VoLqmqwo9vS4bXfbGsdxXzEgVCv/PM0v+1QggL7W0d/ccIy+VCjbXNlGij+PENz6VNg=="
+      }
+    },
+    "npm:react-toastify": {
+      "type": "npm",
+      "name": "npm:react-toastify",
+      "data": {
+        "version": "10.0.5",
+        "packageName": "react-toastify",
+        "hash": "sha512-mNKt2jBXJg4O7pSdbNUfDdTsK9FIdikfsIE/yUCxbAEXl4HMyJaivrVFcn3Elvt5xvCQYhUZm+hqTIu1UXM3Pw=="
       }
     },
     "npm:react-transition-group": {
@@ -28840,6 +28858,11 @@
     {
       "source": "npm:react-map-gl",
       "target": "npm:@types/mapbox-gl",
+      "type": "static"
+    },
+    {
+      "source": "npm:react-toastify",
+      "target": "npm:clsx",
       "type": "static"
     },
     {

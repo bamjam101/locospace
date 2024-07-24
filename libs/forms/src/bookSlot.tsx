@@ -14,7 +14,7 @@ export const locationInfo = z.object({
 
 export const formSchemaValet = z.object({
   pickupInfo: locationInfo,
-  dropofInfo: locationInfo,
+  dropoffInfo: locationInfo,
   differentLocations: z.boolean().optional(),
 })
 

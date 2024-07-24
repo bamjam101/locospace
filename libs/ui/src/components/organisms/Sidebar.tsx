@@ -69,7 +69,9 @@ export const Sidebar = ({ children }: { children: ReactNode }) => {
                   </button>
 
                   <DialogTitle
-                    className={'text-lg font-medium leading-6 text-gray-900'}
+                    className={
+                      'text-lg font-medium leading-6 text-gray-900 mb-2'
+                    }
                     as="h3"
                   >
                     <BrandIcon />
