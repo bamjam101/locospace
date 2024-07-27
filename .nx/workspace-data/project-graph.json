@@ -1,5 +1,88 @@
 {
   "nodes": {
+    "@locospace/web-manager": {
+      "name": "@locospace/web-manager",
+      "type": "lib",
+      "data": {
+        "root": "apps/web-manager",
+        "targets": {
+          "build": {
+            "executor": "nx:run-script",
+            "metadata": {
+              "scriptContent": "next build",
+              "runCommand": "yarn build"
+            },
+            "dependsOn": [
+              "^build"
+            ],
+            "outputs": [
+              "{projectRoot}/.next, build, dist"
+            ],
+            "cache": true,
+            "options": {
+              "script": "build"
+            },
+            "configurations": {}
+          },
+          "dev": {
+            "executor": "nx:run-script",
+            "metadata": {
+              "scriptContent": "next dev -p 3002",
+              "runCommand": "yarn dev"
+            },
+            "dependsOn": [
+              "^dev"
+            ],
+            "options": {
+              "script": "dev"
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "executor": "nx:run-script",
+            "metadata": {
+              "scriptContent": "next lint",
+              "runCommand": "yarn lint"
+            },
+            "dependsOn": [
+              "^lint"
+            ],
+            "cache": true,
+            "options": {
+              "script": "lint"
+            },
+            "configurations": {}
+          },
+          "start": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "start"
+            },
+            "metadata": {
+              "scriptContent": "next start",
+              "runCommand": "yarn start"
+            },
+            "configurations": {}
+          }
+        },
+        "sourceRoot": "apps/web-manager",
+        "name": "@locospace/web-manager",
+        "tags": [
+          "npm:private"
+        ],
+        "metadata": {
+          "targetGroups": {
+            "NPM Scripts": [
+              "dev",
+              "build",
+              "start",
+              "lint"
+            ]
+          }
+        },
+        "implicitDependencies": []
+      }
+    },
     "@locospace/sample-lib": {
       "name": "@locospace/sample-lib",
       "type": "lib",
@@ -12654,6 +12737,78 @@
     }
   },
   "dependencies": {
+    "@locospace/web-manager": [
+      {
+        "source": "@locospace/web-manager",
+        "target": "npm:typescript",
+        "type": "static"
+      },
+      {
+        "source": "@locospace/web-manager",
+        "target": "npm:@types/node",
+        "type": "static"
+      },
+      {
+        "source": "@locospace/web-manager",
+        "target": "npm:@types/react",
+        "type": "static"
+      },
+      {
+        "source": "@locospace/web-manager",
+        "target": "npm:@types/react-dom",
+        "type": "static"
+      },
+      {
+        "source": "@locospace/web-manager",
+        "target": "npm:postcss",
+        "type": "static"
+      },
+      {
+        "source": "@locospace/web-manager",
+        "target": "npm:tailwindcss",
+        "type": "static"
+      },
+      {
+        "source": "@locospace/web-manager",
+        "target": "npm:eslint",
+        "type": "static"
+      },
+      {
+        "source": "@locospace/web-manager",
+        "target": "npm:eslint-config-next@14.2.5",
+        "type": "static"
+      },
+      {
+        "source": "@locospace/web-manager",
+        "target": "@locospace/ui",
+        "type": "static"
+      },
+      {
+        "source": "@locospace/web-manager",
+        "target": "@locospace/network",
+        "type": "static"
+      },
+      {
+        "source": "@locospace/web-manager",
+        "target": "@locospace/util",
+        "type": "static"
+      },
+      {
+        "source": "@locospace/web-manager",
+        "target": "npm:react",
+        "type": "static"
+      },
+      {
+        "source": "@locospace/web-manager",
+        "target": "npm:react-dom",
+        "type": "static"
+      },
+      {
+        "source": "@locospace/web-manager",
+        "target": "npm:next@14.2.5",
+        "type": "static"
+      }
+    ],
     "@locospace/sample-lib": [],
     "@locospace/network": [
       {
