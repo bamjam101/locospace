@@ -4,8 +4,7 @@ import {
 } from '@locospace/network/src/gql/generated'
 import { useTakeSkip } from '@locospace/util/src/hooks/pagination'
 import { useSession } from 'next-auth/react'
-import { useLazyQuery, useQuery } from '@apollo/client'
-import { useEffect } from 'react'
+import { useQuery } from '@apollo/client'
 import { ShowData } from './ShowData'
 import { CustomerBookingCard } from './CustomerBookingCard'
 

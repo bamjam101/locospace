@@ -2,6 +2,7 @@ import { GaragesQuery } from '@locospace/network/src/gql/generated'
 import { AutoImageChanger } from './AutoImageChanger'
 import Link from 'next/link'
 import { IconTypes } from '../molecules/IconTypes'
+import { CreateManySlotsDialog } from './CreateManySlotsDialog'
 
 export interface IGarageCardProps {
   garage: GaragesQuery['garages'][number]
@@ -10,7 +11,7 @@ export interface IGarageCardProps {
 export const GarageCard = ({ garage }: IGarageCardProps) => {
   return (
     <div className="overflow-hidden bg-white shadow-lg flex flex-col">
-      <AutoImageChanger images={garage.images || []} durationPerImage={5000} />
+      <AutoImageChanger images={garage.images || []} durationPerImage={10000} />
 
       <div className="p-2 flex-grow flex flex-col gap-4">
         <div>
@@ -41,7 +42,7 @@ export const GarageCard = ({ garage }: IGarageCardProps) => {
                 <div className="text-sm">{slotType.count}</div>
               </div>
             ))}
-            {/* <CreateManySlotsDialog garageId={garage.id} /> */}
+            <CreateManySlotsDialog garageId={garage.id} />
           </>
         </div>
       </div>

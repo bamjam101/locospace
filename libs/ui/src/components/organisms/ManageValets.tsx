@@ -1,6 +1,6 @@
 import { SearchGaragesQuery } from '@locospace/network/src/gql/generated'
 import { useState } from 'react'
-import { toast } from 'react-toastify'
+import { toast } from '../molecules/Toast'
 import { useFormContext, useWatch } from 'react-hook-form'
 import { FormTypeBookSlot } from '@locospace/forms/src/bookSlot'
 import { Switch } from '../atoms/Switch'

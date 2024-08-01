@@ -25,7 +25,7 @@ import { ViewState } from '@locospace/util/types'
 import { CenterOfMap, DefaultZoomControls } from '../organisms/map/ZoomControls'
 import { useFormContext } from 'react-hook-form'
 import { AddSlots, GarageMapMarker } from '../organisms/CreateGarageComponents'
-import { toast } from 'react-toastify'
+import { toast } from '../molecules/Toast'
 
 const CreateGarageContent = () => {
   const {
@@ -71,7 +71,7 @@ const CreateGarageContent = () => {
             }) => {
               const uploadedImages = await upload(images)
 
-              const result = await createGarage({
+              await createGarage({
                 variables: {
                   createGarageInput: {
                     Address: location,

@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 
 export const formschemaCreateCompany = z.object({
-  companyName: z.string().min(1, { message: 'Company name is required' }),
+  displayName: z.string().min(1, { message: 'Company name is required' }),
   description: z.string(),
   managerId: z.string().min(1, { message: 'Manager ID is required' }),
   managerName: z.string().optional().nullable(),

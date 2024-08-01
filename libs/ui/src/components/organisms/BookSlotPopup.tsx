@@ -23,7 +23,7 @@ import { useState } from 'react'
 import { useSession } from 'next-auth/react'
 import { TotalPrice } from '@locospace/util/types'
 import { loadStripe } from '@stripe/stripe-js'
-import { toast } from 'react-toastify'
+import { toast } from '../molecules/Toast'
 import { ManageValets } from './ManageValets'
 
 export const BookSlotPopup = ({
