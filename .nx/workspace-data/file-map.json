@@ -45,20 +45,6 @@
       }
     ],
     "projectFileMap": {
-      "@locospace/sample-lib": [
-        {
-          "file": "libs/sample-lib/index.ts",
-          "hash": "2629964058004762078"
-        },
-        {
-          "file": "libs/sample-lib/package.json",
-          "hash": "7859013930514970581"
-        },
-        {
-          "file": "libs/sample-lib/tsconfig.json",
-          "hash": "14590710882709848906"
-        }
-      ],
       "@locospace/ui": [
         {
           "file": "libs/ui/.eslintrc.json",
@@ -122,7 +108,7 @@
         },
         {
           "file": "libs/ui/src/app/globals.css",
-          "hash": "425988627062392941"
+          "hash": "12921952229663079074"
         },
         {
           "file": "libs/ui/src/app/layout.tsx",
@@ -262,7 +248,7 @@
         },
         {
           "file": "libs/ui/src/components/molecules/Toast.tsx",
-          "hash": "957732313510018278"
+          "hash": "11225206479281037293"
         },
         {
           "file": "libs/ui/src/components/molecules/UserInfo.tsx",
@@ -274,15 +260,23 @@
         },
         {
           "file": "libs/ui/src/components/organisms/BookSlotPopup.tsx",
-          "hash": "3293102177303578284"
+          "hash": "5523797280810051176"
+        },
+        {
+          "file": "libs/ui/src/components/organisms/CheckInOutButtons.tsx",
+          "hash": "4571222338220647453"
         },
         {
           "file": "libs/ui/src/components/organisms/CreateCompany.tsx",
-          "hash": "17966747219539790779"
+          "hash": "2177508301983549668"
         },
         {
           "file": "libs/ui/src/components/organisms/CreateGarageComponents.tsx",
           "hash": "15640102883342565162"
+        },
+        {
+          "file": "libs/ui/src/components/organisms/CreateManySlotsDialog.tsx",
+          "hash": "1851356662497497864"
         },
         {
           "file": "libs/ui/src/components/organisms/CustomerBookingCard.tsx",
@@ -298,7 +292,7 @@
         },
         {
           "file": "libs/ui/src/components/organisms/GarageCard.tsx",
-          "hash": "1148135746787921658"
+          "hash": "7427744529394745271"
         },
         {
           "file": "libs/ui/src/components/organisms/Header.tsx",
@@ -321,16 +315,24 @@
           "hash": "3486753355170618032"
         },
         {
+          "file": "libs/ui/src/components/organisms/ManageBookingCard.tsx",
+          "hash": "8442591846103573117"
+        },
+        {
           "file": "libs/ui/src/components/organisms/ManageValets.tsx",
-          "hash": "7501939466205016313"
+          "hash": "7431394472450576342"
         },
         {
           "file": "libs/ui/src/components/organisms/ShowCustomerBookings.tsx",
-          "hash": "14366834089525689707"
+          "hash": "9823326820124226024"
         },
         {
           "file": "libs/ui/src/components/organisms/ShowData.tsx",
           "hash": "2453915468921820907"
+        },
+        {
+          "file": "libs/ui/src/components/organisms/ShowGarageBookings.tsx",
+          "hash": "12944011658305969438"
         },
         {
           "file": "libs/ui/src/components/organisms/Sidebar.tsx",
@@ -382,11 +384,15 @@
         },
         {
           "file": "libs/ui/src/components/templates/CreateGarage.tsx",
-          "hash": "7037533359844575650"
+          "hash": "3597312012848390117"
         },
         {
           "file": "libs/ui/src/components/templates/ListCustomerBookings.tsx",
           "hash": "318944150432362121"
+        },
+        {
+          "file": "libs/ui/src/components/templates/ListGarageBookings.tsx",
+          "hash": "2614187998707444474"
         },
         {
           "file": "libs/ui/src/components/templates/LoginForm.tsx",
@@ -417,59 +423,218 @@
           "hash": "9299668462629348702"
         }
       ],
-      "@locospace/forms": [
+      "@locospace/web-manager": [
         {
-          "file": "libs/forms/package.json",
-          "hash": "3398023705575229221",
+          "file": "apps/web-manager/.eslintrc.json",
+          "hash": "10616060546436571437"
+        },
+        {
+          "file": "apps/web-manager/.gitignore",
+          "hash": "15751075988610075934"
+        },
+        {
+          "file": "apps/web-manager/README.md",
+          "hash": "12205685531602560652"
+        },
+        {
+          "file": "apps/web-manager/next.config.mjs",
+          "hash": "4173500966420132526"
+        },
+        {
+          "file": "apps/web-manager/package.json",
+          "hash": "3167523938042901538",
           "deps": [
-            "npm:@hookform/resolvers",
-            "npm:react-hook-form",
-            "npm:zod"
+            "npm:typescript",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:postcss",
+            "npm:tailwindcss",
+            "npm:eslint",
+            "npm:eslint-config-next@14.2.5",
+            "@locospace/ui",
+            "@locospace/network",
+            "@locospace/util",
+            "npm:react",
+            "npm:react-dom",
+            "npm:next@14.2.5"
           ]
         },
         {
-          "file": "libs/forms/src/adapters/searchFormAdapter.ts",
-          "hash": "8959026023399574836"
+          "file": "apps/web-manager/postcss.config.mjs",
+          "hash": "2557392112968376575"
         },
         {
-          "file": "libs/forms/src/adapters/util.ts",
-          "hash": "813068890982100068"
+          "file": "apps/web-manager/public/next.svg",
+          "hash": "8300767200008744458"
         },
         {
-          "file": "libs/forms/src/bookSlot.tsx",
-          "hash": "17273563474660144980"
+          "file": "apps/web-manager/public/user.png",
+          "hash": "16941821795138000203"
         },
         {
-          "file": "libs/forms/src/createCompany.tsx",
-          "hash": "5104468404422128123"
+          "file": "apps/web-manager/public/vercel.svg",
+          "hash": "2376673330454856631"
         },
         {
-          "file": "libs/forms/src/createGarages.tsx",
-          "hash": "1701244974251900800"
+          "file": "apps/web-manager/src/app/(auth)/login/page.tsx",
+          "hash": "8926891702000015922"
         },
         {
-          "file": "libs/forms/src/login.tsx",
-          "hash": "5998598794173231950"
+          "file": "apps/web-manager/src/app/(auth)/register/page.tsx",
+          "hash": "9647936459777268579"
         },
         {
-          "file": "libs/forms/src/register.tsx",
-          "hash": "15623232439786923466"
+          "file": "apps/web-manager/src/app/(root)/bookings/page.tsx",
+          "hash": "3234824990358434312"
         },
         {
-          "file": "libs/forms/src/schema.ts",
-          "hash": "2762160538206580256"
+          "file": "apps/web-manager/src/app/(root)/new-garage/page.tsx",
+          "hash": "3271688697252664481"
         },
         {
-          "file": "libs/forms/src/searchGarages.tsx",
-          "hash": "9836324624914915561"
+          "file": "apps/web-manager/src/app/api/auth/[...nextauth]/route.ts",
+          "hash": "13926939686501803321"
         },
         {
-          "file": "libs/forms/src/util/index.ts",
-          "hash": "1679380329672167559"
+          "file": "apps/web-manager/src/app/api/auth/token/route.ts",
+          "hash": "127825190127641943"
         },
         {
-          "file": "libs/forms/tsconfig.json",
-          "hash": "12053352178282715962"
+          "file": "apps/web-manager/src/app/favicon.ico",
+          "hash": "9157999678830540297"
+        },
+        {
+          "file": "apps/web-manager/src/app/layout.tsx",
+          "hash": "2479633454883190703"
+        },
+        {
+          "file": "apps/web-manager/src/app/page.tsx",
+          "hash": "12952878483792616277"
+        },
+        {
+          "file": "apps/web-manager/tailwind.config.ts",
+          "hash": "16967495277415250122"
+        },
+        {
+          "file": "apps/web-manager/tsconfig.json",
+          "hash": "4320684160905164141"
+        },
+        {
+          "file": "apps/web-manager/types.d.ts",
+          "hash": "9299668462629348702"
+        }
+      ],
+      "@locospace/web": [
+        {
+          "file": "apps/web/.env.example",
+          "hash": "6247362272919674132"
+        },
+        {
+          "file": "apps/web/.eslintrc.json",
+          "hash": "10616060546436571437"
+        },
+        {
+          "file": "apps/web/.gitignore",
+          "hash": "15751075988610075934"
+        },
+        {
+          "file": "apps/web/README.md",
+          "hash": "12205685531602560652"
+        },
+        {
+          "file": "apps/web/next.config.mjs",
+          "hash": "4173500966420132526"
+        },
+        {
+          "file": "apps/web/package.json",
+          "hash": "826387243431252194",
+          "deps": [
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:eslint",
+            "npm:eslint-config-next",
+            "npm:postcss",
+            "npm:tailwindcss",
+            "npm:typescript",
+            "@locospace/network",
+            "@locospace/sample-lib",
+            "@locospace/ui",
+            "npm:@tabler/icons-react",
+            "npm:next",
+            "npm:next-auth",
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "apps/web/postcss.config.mjs",
+          "hash": "2557392112968376575"
+        },
+        {
+          "file": "apps/web/public/next.svg",
+          "hash": "8300767200008744458"
+        },
+        {
+          "file": "apps/web/public/user.png",
+          "hash": "16941821795138000203"
+        },
+        {
+          "file": "apps/web/public/vercel.svg",
+          "hash": "2376673330454856631"
+        },
+        {
+          "file": "apps/web/src/app/(auth)/login/page.tsx",
+          "hash": "8926891702000015922"
+        },
+        {
+          "file": "apps/web/src/app/(auth)/register/page.tsx",
+          "hash": "9647936459777268579"
+        },
+        {
+          "file": "apps/web/src/app/(root)/booking-failed/page.tsx",
+          "hash": "5756970316770711288"
+        },
+        {
+          "file": "apps/web/src/app/(root)/bookings/page.tsx",
+          "hash": "16893858092327414335"
+        },
+        {
+          "file": "apps/web/src/app/(root)/search/page.tsx",
+          "hash": "7649300018320337554"
+        },
+        {
+          "file": "apps/web/src/app/api/auth/[...nextauth]/route.ts",
+          "hash": "13926939686501803321"
+        },
+        {
+          "file": "apps/web/src/app/api/auth/token/route.ts",
+          "hash": "127825190127641943"
+        },
+        {
+          "file": "apps/web/src/app/favicon.ico",
+          "hash": "9157999678830540297"
+        },
+        {
+          "file": "apps/web/src/app/layout.tsx",
+          "hash": "2000539204517793999"
+        },
+        {
+          "file": "apps/web/src/app/page.tsx",
+          "hash": "2739094955787067508"
+        },
+        {
+          "file": "apps/web/tailwind.config.ts",
+          "hash": "16967495277415250122"
+        },
+        {
+          "file": "apps/web/tsconfig.json",
+          "hash": "4320684160905164141"
+        },
+        {
+          "file": "apps/web/types.d.ts",
+          "hash": "9299668462629348702"
         }
       ],
       "@locospace/api": [
@@ -1439,6 +1604,127 @@
           "hash": "1876265833229380624"
         }
       ],
+      "@locospace/sample-lib": [
+        {
+          "file": "libs/sample-lib/index.ts",
+          "hash": "2629964058004762078"
+        },
+        {
+          "file": "libs/sample-lib/package.json",
+          "hash": "7859013930514970581"
+        },
+        {
+          "file": "libs/sample-lib/tsconfig.json",
+          "hash": "14590710882709848906"
+        }
+      ],
+      "@locospace/network": [
+        {
+          "file": "libs/network/codegen.ts",
+          "hash": "12651637229970309073"
+        },
+        {
+          "file": "libs/network/next-auth.d.ts",
+          "hash": "6929401787329986376"
+        },
+        {
+          "file": "libs/network/package.json",
+          "hash": "13637056905870755961",
+          "deps": [
+            "npm:react",
+            "npm:@graphql-codegen/cli",
+            "npm:@graphql-codegen/named-operations-object",
+            "npm:@graphql-codegen/typed-document-node",
+            "npm:@parcel/watcher",
+            "npm:@types/jsonwebtoken",
+            "npm:@apollo/client",
+            "npm:jsonwebtoken"
+          ]
+        },
+        {
+          "file": "libs/network/src/config/apollo.tsx",
+          "hash": "419660069361398497"
+        },
+        {
+          "file": "libs/network/src/config/authOptions.ts",
+          "hash": "421451923314202776"
+        },
+        {
+          "file": "libs/network/src/fetch/index.ts",
+          "hash": "8929509488867074097"
+        },
+        {
+          "file": "libs/network/src/gql/generated.tsx",
+          "hash": "8483475432939390376"
+        },
+        {
+          "file": "libs/network/src/gql/queries.graphql",
+          "hash": "14513899684116117293"
+        },
+        {
+          "file": "libs/network/tsconfig.json",
+          "hash": "12053352178282715962"
+        }
+      ],
+      "@locospace/forms": [
+        {
+          "file": "libs/forms/package.json",
+          "hash": "3398023705575229221",
+          "deps": [
+            "npm:@hookform/resolvers",
+            "npm:react-hook-form",
+            "npm:zod"
+          ]
+        },
+        {
+          "file": "libs/forms/src/adapters/searchFormAdapter.ts",
+          "hash": "8959026023399574836"
+        },
+        {
+          "file": "libs/forms/src/adapters/util.ts",
+          "hash": "813068890982100068"
+        },
+        {
+          "file": "libs/forms/src/bookSlot.tsx",
+          "hash": "17273563474660144980"
+        },
+        {
+          "file": "libs/forms/src/createCompany.tsx",
+          "hash": "7958435848483694776"
+        },
+        {
+          "file": "libs/forms/src/createGarages.tsx",
+          "hash": "1701244974251900800"
+        },
+        {
+          "file": "libs/forms/src/createSlots.tsx",
+          "hash": "538236088865703590"
+        },
+        {
+          "file": "libs/forms/src/login.tsx",
+          "hash": "5998598794173231950"
+        },
+        {
+          "file": "libs/forms/src/register.tsx",
+          "hash": "15623232439786923466"
+        },
+        {
+          "file": "libs/forms/src/schema.ts",
+          "hash": "2762160538206580256"
+        },
+        {
+          "file": "libs/forms/src/searchGarages.tsx",
+          "hash": "9836324624914915561"
+        },
+        {
+          "file": "libs/forms/src/util/index.ts",
+          "hash": "1679380329672167559"
+        },
+        {
+          "file": "libs/forms/tsconfig.json",
+          "hash": "12053352178282715962"
+        }
+      ],
       "@locospace/util": [
         {
           "file": "libs/util/package.json",
@@ -1492,264 +1778,6 @@
         {
           "file": "libs/util/types.ts",
           "hash": "17469264529678947349"
-        }
-      ],
-      "@locospace/network": [
-        {
-          "file": "libs/network/codegen.ts",
-          "hash": "12651637229970309073"
-        },
-        {
-          "file": "libs/network/next-auth.d.ts",
-          "hash": "6929401787329986376"
-        },
-        {
-          "file": "libs/network/package.json",
-          "hash": "13637056905870755961",
-          "deps": [
-            "npm:react",
-            "npm:@graphql-codegen/cli",
-            "npm:@graphql-codegen/named-operations-object",
-            "npm:@graphql-codegen/typed-document-node",
-            "npm:@parcel/watcher",
-            "npm:@types/jsonwebtoken",
-            "npm:@apollo/client",
-            "npm:jsonwebtoken"
-          ]
-        },
-        {
-          "file": "libs/network/src/config/apollo.tsx",
-          "hash": "419660069361398497"
-        },
-        {
-          "file": "libs/network/src/config/authOptions.ts",
-          "hash": "421451923314202776"
-        },
-        {
-          "file": "libs/network/src/fetch/index.ts",
-          "hash": "8929509488867074097"
-        },
-        {
-          "file": "libs/network/src/gql/generated.tsx",
-          "hash": "8483475432939390376"
-        },
-        {
-          "file": "libs/network/src/gql/queries.graphql",
-          "hash": "14513899684116117293"
-        },
-        {
-          "file": "libs/network/tsconfig.json",
-          "hash": "12053352178282715962"
-        }
-      ],
-      "@locospace/web-manager": [
-        {
-          "file": "apps/web-manager/.eslintrc.json",
-          "hash": "10616060546436571437"
-        },
-        {
-          "file": "apps/web-manager/.gitignore",
-          "hash": "15751075988610075934"
-        },
-        {
-          "file": "apps/web-manager/README.md",
-          "hash": "12205685531602560652"
-        },
-        {
-          "file": "apps/web-manager/next.config.mjs",
-          "hash": "6567081978241091914"
-        },
-        {
-          "file": "apps/web-manager/package.json",
-          "hash": "3167523938042901538",
-          "deps": [
-            "npm:typescript",
-            "npm:@types/node",
-            "npm:@types/react",
-            "npm:@types/react-dom",
-            "npm:postcss",
-            "npm:tailwindcss",
-            "npm:eslint",
-            "npm:eslint-config-next@14.2.5",
-            "@locospace/ui",
-            "@locospace/network",
-            "@locospace/util",
-            "npm:react",
-            "npm:react-dom",
-            "npm:next@14.2.5"
-          ]
-        },
-        {
-          "file": "apps/web-manager/postcss.config.mjs",
-          "hash": "2557392112968376575"
-        },
-        {
-          "file": "apps/web-manager/public/next.svg",
-          "hash": "8300767200008744458"
-        },
-        {
-          "file": "apps/web-manager/public/user.png",
-          "hash": "16941821795138000203"
-        },
-        {
-          "file": "apps/web-manager/public/vercel.svg",
-          "hash": "2376673330454856631"
-        },
-        {
-          "file": "apps/web-manager/src/app/(auth)/login/page.tsx",
-          "hash": "8926891702000015922"
-        },
-        {
-          "file": "apps/web-manager/src/app/(auth)/register/page.tsx",
-          "hash": "9647936459777268579"
-        },
-        {
-          "file": "apps/web-manager/src/app/(root)/new-garage/page.tsx",
-          "hash": "3271688697252664481"
-        },
-        {
-          "file": "apps/web-manager/src/app/api/auth/[...nextauth]/route.ts",
-          "hash": "13926939686501803321"
-        },
-        {
-          "file": "apps/web-manager/src/app/api/auth/token/route.ts",
-          "hash": "127825190127641943"
-        },
-        {
-          "file": "apps/web-manager/src/app/favicon.ico",
-          "hash": "9157999678830540297"
-        },
-        {
-          "file": "apps/web-manager/src/app/layout.tsx",
-          "hash": "15713360579036887646"
-        },
-        {
-          "file": "apps/web-manager/src/app/page.tsx",
-          "hash": "12952878483792616277"
-        },
-        {
-          "file": "apps/web-manager/tailwind.config.ts",
-          "hash": "16967495277415250122"
-        },
-        {
-          "file": "apps/web-manager/tsconfig.json",
-          "hash": "4320684160905164141"
-        },
-        {
-          "file": "apps/web-manager/types.d.ts",
-          "hash": "9299668462629348702"
-        }
-      ],
-      "@locospace/web": [
-        {
-          "file": "apps/web/.env.example",
-          "hash": "6247362272919674132"
-        },
-        {
-          "file": "apps/web/.eslintrc.json",
-          "hash": "10616060546436571437"
-        },
-        {
-          "file": "apps/web/.gitignore",
-          "hash": "15751075988610075934"
-        },
-        {
-          "file": "apps/web/README.md",
-          "hash": "12205685531602560652"
-        },
-        {
-          "file": "apps/web/next.config.mjs",
-          "hash": "6567081978241091914"
-        },
-        {
-          "file": "apps/web/package.json",
-          "hash": "826387243431252194",
-          "deps": [
-            "npm:@types/node",
-            "npm:@types/react",
-            "npm:@types/react-dom",
-            "npm:eslint",
-            "npm:eslint-config-next",
-            "npm:postcss",
-            "npm:tailwindcss",
-            "npm:typescript",
-            "@locospace/network",
-            "@locospace/sample-lib",
-            "@locospace/ui",
-            "npm:@tabler/icons-react",
-            "npm:next",
-            "npm:next-auth",
-            "npm:react",
-            "npm:react-dom"
-          ]
-        },
-        {
-          "file": "apps/web/postcss.config.mjs",
-          "hash": "2557392112968376575"
-        },
-        {
-          "file": "apps/web/public/next.svg",
-          "hash": "8300767200008744458"
-        },
-        {
-          "file": "apps/web/public/user.png",
-          "hash": "16941821795138000203"
-        },
-        {
-          "file": "apps/web/public/vercel.svg",
-          "hash": "2376673330454856631"
-        },
-        {
-          "file": "apps/web/src/app/(auth)/login/page.tsx",
-          "hash": "8926891702000015922"
-        },
-        {
-          "file": "apps/web/src/app/(auth)/register/page.tsx",
-          "hash": "9647936459777268579"
-        },
-        {
-          "file": "apps/web/src/app/(root)/booking-failed/page.tsx",
-          "hash": "5756970316770711288"
-        },
-        {
-          "file": "apps/web/src/app/(root)/bookings/page.tsx",
-          "hash": "16893858092327414335"
-        },
-        {
-          "file": "apps/web/src/app/(root)/search/page.tsx",
-          "hash": "7649300018320337554"
-        },
-        {
-          "file": "apps/web/src/app/api/auth/[...nextauth]/route.ts",
-          "hash": "13926939686501803321"
-        },
-        {
-          "file": "apps/web/src/app/api/auth/token/route.ts",
-          "hash": "127825190127641943"
-        },
-        {
-          "file": "apps/web/src/app/favicon.ico",
-          "hash": "9157999678830540297"
-        },
-        {
-          "file": "apps/web/src/app/layout.tsx",
-          "hash": "2000539204517793999"
-        },
-        {
-          "file": "apps/web/src/app/page.tsx",
-          "hash": "2739094955787067508"
-        },
-        {
-          "file": "apps/web/tailwind.config.ts",
-          "hash": "16967495277415250122"
-        },
-        {
-          "file": "apps/web/tsconfig.json",
-          "hash": "4320684160905164141"
-        },
-        {
-          "file": "apps/web/types.d.ts",
-          "hash": "9299668462629348702"
         }
       ]
     }
