@@ -10,6 +10,7 @@
     "tsc": "tsc --noEmit"
   },
   "dependencies": {
+    "@locospace/3d": "*",
     "@locospace/network": "*",
     "@locospace/sample-lib": "*",
     "@locospace/ui": "*",
