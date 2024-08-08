@@ -45,8 +45,6 @@ export const Directions = ({
 
       const data = await response.json()
 
-      console.log(data)
-
       const coordinates =
         data?.routes[0]?.legs[0]?.steps?.map(
           (step: { maneuver: { location?: any } }) =>
