@@ -9,31 +9,28 @@ import { isEndTimeValid, isStartTimeValid } from './util'
 
 const minMaxTuple = z.tuple([z.number(), z.number()])
 
-export const formSchemaSearchGarages = z.object({
-  startTime: z.string(),
-  endTime: z.string(),
+export const formSchemaSearchGarages = z
+  .object({
+    startTime: z.string(),
+    endTime: z.string(),
 
-  locationFilter: z.object({
-    ne_lat: z.number(),
-    ne_lng: z.number(),
-    sw_lat: z.number(),
-    sw_lng: z.number(),
-  }),
+    locationFilter: z.object({
+      ne_lat: z.number(),
+      ne_lng: z.number(),
+      sw_lat: z.number(),
+      sw_lng: z.number(),
+    }),
 
-  types: z.nativeEnum(SlotType).array(),
+    types: z.nativeEnum(SlotType).array(),
 
-  pricePerHour: minMaxTuple.optional(),
-  height: minMaxTuple.optional(),
-  width: minMaxTuple.optional(),
-  length: minMaxTuple.optional(),
+    pricePerHour: minMaxTuple.optional(),
+    height: minMaxTuple.optional(),
+    width: minMaxTuple.optional(),
+    length: minMaxTuple.optional(),
 
-  skip: z.number().optional(),
-  take: z.number().optional(),
-})
-
-export type FormTypeSearchGarages = z.infer<typeof formSchemaSearchGarages>
-
-formSchemaSearchGarages
+    skip: z.number().optional(),
+    take: z.number().optional(),
+  })
   .refine(({ startTime }) => isStartTimeValid(startTime), {
     message: 'Start time must be in the future',
     path: ['startTime'],
@@ -42,6 +39,8 @@ formSchemaSearchGarages
     message: 'End time must be after start time',
     path: ['endTime'],
   })
+
+export type FormTypeSearchGarages = z.infer<typeof formSchemaSearchGarages>
 
 export const getCurrentTimeAndOneHourLater = () => {
   const startTime = new Date()

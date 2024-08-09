@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { ReactNode } from 'react'
 import { BrandIcon } from '../atoms/BrandIcon'
 import { GoogleButton } from './GoogleButton'
+import { CarScene } from '@locospace/3d/src/scenes/CarScene'
+import { RotatingCamera } from '@locospace/3d/src/components/camera/Rotating'
 
 export interface IAuthLayoutProps {
   children: ReactNode
@@ -14,6 +16,11 @@ export interface IAuthLayoutProps {
 export const AuthLayout = ({ title, children }: IAuthLayoutProps) => {
   return (
     <div className="relative h-[calc(100vh-4rem)]">
+      <CarScene
+        orbitControls={false}
+        camera={<RotatingCamera />}
+        hideAllComments
+      />
       <div className=" flex flex-col justify-center items-center absolute top-0 bg-black/20 backdrop-blur-sm bottom-0">
         <div className="p-4 text-white ">
           <div className="w-full max-w-lg mx-auto ">

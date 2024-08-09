@@ -21,7 +21,6 @@ import { MenuItem } from '@locospace/util/types'
 const MENUITEMS: MenuItem[] = [
   { label: 'Garages', href: '/' },
   { label: 'Admins', href: '/manage-admins' },
-  { label: 'Settings', href: '/settings' },
 ]
 
 export default function RootLayout({
@@ -34,7 +33,7 @@ export default function RootLayout({
       <SessionProvider>
         <ApolloProvider>
           <body className={`${inter.className} bg-gray-25`}>
-            <Header menuItems={MENUITEMS} />
+            <Header type={'admin'} menuItems={MENUITEMS} />
             <Container>{children}</Container>
             <ToastContainer />
           </body>

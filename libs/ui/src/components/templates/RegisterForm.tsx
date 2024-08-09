@@ -83,7 +83,9 @@ export const RegisterForm = ({ className, role }: ISignupFormProps) => {
         </div>
       ) : null}
 
-      <Button type="submit">Register</Button>
+      <Button type="submit" loading={loading}>
+        Register
+      </Button>
 
       <div className="mt-4 text-sm">
         Already have an locospace account?

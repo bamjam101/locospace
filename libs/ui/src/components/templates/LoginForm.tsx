@@ -9,6 +9,7 @@ import Link from 'next/link'
 
 import { signIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
+import { useState } from 'react'
 
 export interface ILoginFormProps {
   className?: string
@@ -23,10 +24,14 @@ export const LoginForm = ({ className }: ILoginFormProps) => {
 
   const { replace } = useRouter()
 
+  const [loading, setLoading] = useState(false)
+
   return (
     <Form
       onSubmit={handleSubmit(async (data) => {
         const { email, password } = data
+
+        setLoading(true)
 
         const result = await signIn('credentials', {
           email,
@@ -41,6 +46,8 @@ export const LoginForm = ({ className }: ILoginFormProps) => {
         if (result?.error) {
           alert('Login failed')
         }
+
+        setLoading(false)
       })}
     >
       <HtmlLabel title="Email" error={errors.email?.message}>
@@ -59,7 +66,9 @@ export const LoginForm = ({ className }: ILoginFormProps) => {
         />
       </HtmlLabel>
 
-      <Button type="submit">Submit</Button>
+      <Button type="submit" loading={loading}>
+        Submit
+      </Button>
 
       <div className="mt-4 text-sm">
         Do not have an locospace account?
